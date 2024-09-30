@@ -5,7 +5,7 @@ def name_validate(name):
     pattern  = r"^[A-Za-z].*$"
 
     if(re.match(pattern, name)):
-        return name
+        return name.upper()
     else:
         return False
 
@@ -26,14 +26,17 @@ def quantity_validate(num):
 def id_validate(id):
     pattern = r"^[A-Za-z0-9]{4}$"
     if(re.match(pattern, id)):
-        return id
+        return id.upper()
     else:
         return False
 
 def check_blank(string):
     pattern = r'^(?!-)\S'
     if(re.match(pattern, string)):
-        return string
+        return string.upper()
     else:
         return False
 
+
+
+print(name_validate('mansLsdklf'))
