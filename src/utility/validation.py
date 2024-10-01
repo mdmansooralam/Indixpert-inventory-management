@@ -36,7 +36,3 @@ def check_blank(string):
         return string.upper()
     else:
         return False
-
-
-
-print(name_validate('mansLsdklf'))
