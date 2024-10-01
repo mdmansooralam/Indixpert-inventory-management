@@ -7,7 +7,7 @@ class UserFeatures(ManageUser):
 
     def signup(self):
         try:
-            username = name_validate(input('Enter username : '))
+            username = username_validate(input(f'Hint : no spce allowed\nEnter username : '))
             if(not username):
                 raise Exception('please enter a valid username')
             if(check_user(username)):
@@ -17,7 +17,7 @@ class UserFeatures(ManageUser):
             if(not name):
                 raise Exception('please enter a valid name')
             
-            password = name_validate(input('Enter Password : '))
+            password = password_validate(input(f'Hint : MinLength - 7 and should have lowercase uppercase symbol digit\nEnter Password : '))
             if(not password):
                 raise Exception('please enter a valid password')
             
@@ -28,13 +28,13 @@ class UserFeatures(ManageUser):
 
     def login(self):
         try:
-            username = name_validate(input('Enter username : '))
+            username = username_validate(input(f'Hint : no spce allowed\nEnter username : '))
             if(not username):
                 raise Exception('please enter a valid username : ')
             if(not check_user(username)):
                 raise Exception('username not found please try again.....')
             
-            password = name_validate(input('Enter Your Password : '))
+            password = password_validate(input(f'Hint : MinLength - 7 and should have lowercase uppercase symbol digit\nEnter Password : '))
             if(not password):
                 raise Exception('please enter a valid password ..')
             

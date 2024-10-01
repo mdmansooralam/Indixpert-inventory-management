@@ -36,3 +36,19 @@ def check_blank(string):
         return string.upper()
     else:
         return False
+    
+def password_validate(password):
+    pattern = r'^(?=.*[A-Z])(?=.*[a-z])(?=.*\d)(?=.*[@#$%^&+=]).{7,}$'
+    if(re.match(pattern, password)):
+        return password
+    else:
+        return False
+    
+def username_validate(username):
+    pattern = r'^\S+$'
+    if(re.match(pattern, username)):
+        return username
+    else:
+        return False
+
+
