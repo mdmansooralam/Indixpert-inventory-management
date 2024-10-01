@@ -11,6 +11,8 @@ class ManageUser(User):
     def user_signup(self, name, username, password):
         if(check_user(username)):
             print("username already exist please try again")
+        elif(len(self.users)>=3):
+            print("you can not signup three users already registred")
         else:
             id = str(uuid.uuid4())[:10]
             new_user = UserModel(id, name, username, password)
