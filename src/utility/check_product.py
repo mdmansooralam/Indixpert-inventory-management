@@ -1,5 +1,5 @@
-from src.sales import Sales
-from src.inventory import Inventory
+from src.sales_management.sales import Sales
+from src.inventory_management.inventory import Inventory
 
 
 def product_available_in_inventory(id):

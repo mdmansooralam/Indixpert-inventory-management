@@ -1,7 +1,8 @@
-from src.manage_data import manage_user_input
+
+from src.auth_menu import authentication_menu
 
 def main():
-    manage_user_input()
+    authentication_menu()
     
 
 

@@ -1,6 +1,6 @@
 import uuid
 from src.product import Product
-from src.inventory import Inventory
+from src.inventory_management.inventory import Inventory
 
 class ManageInventory(Inventory):
 

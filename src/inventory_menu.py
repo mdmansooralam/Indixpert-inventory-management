@@ -2,7 +2,7 @@ from src.inventory_management.inventory_features import InventoryFeatures
 from src.sales_management.sales_features import SalesFeatures
 
 
-def manage_user_input():
+def inventory_menu():
     inventory = InventoryFeatures()
     sale = SalesFeatures()
     while True:

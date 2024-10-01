@@ -1,5 +1,5 @@
-from src.sales import Sales
-from src.inventory import Inventory
+from src.sales_management.sales import Sales
+from src.inventory_management.inventory import Inventory
 from src.product import Product
 from src.utility.check_product import product_available_in_sales_record
 
