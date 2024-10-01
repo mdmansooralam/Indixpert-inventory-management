@@ -9,7 +9,6 @@ import uuid
 class ManageUser(User):
     
     def user_signup(self, name, username, password):
-        
         if(check_user(username)):
             print("username already exist please try again")
         else:

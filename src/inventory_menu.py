@@ -17,7 +17,7 @@ def inventory_menu():
         print(f'7 SALE PRODUCT')
         print(f'8 SEARCH SALE PRODUCT')
         print(f'9 VIEW ALL SALES PRODUCT')
-        print(f'10 EXIT')
+        print(f'10 LOGOUT')
         print(f'********************************************************************\n')
 
         choice = input('Please Chooose Any Option : ')

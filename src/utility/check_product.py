@@ -7,7 +7,6 @@ def product_available_in_inventory(id):
     for pd in products:
         if(pd.id == id):
             return True
-        break
     else:
         return False
 
@@ -16,6 +15,6 @@ def product_available_in_sales_record(id):
     for sale in sales:
         if(sale.id == id):
             return True
-        break
     else:
         return False
+    
