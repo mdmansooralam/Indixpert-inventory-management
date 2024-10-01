@@ -16,8 +16,9 @@ class ManageSales(Sales):
                 else:
                     product.quantity -= quantity
                     self.inventory.save_inventory()
+                    total = product.price * quantity
                     self.all_sales.append(Product(
-                        product.name, quantity, product.price, product.id
+                        product.name, quantity, total, product.id
                     ))
                     self.save_sales()
                     print(f'{quantity} {product.name} has been sold successful ..')
@@ -25,7 +26,7 @@ class ManageSales(Sales):
 
     def get_sale_product(self, id):
         if(product_available_in_sales_record(id)):
-            print(f'ID       NAME         QTY      PRICE')
+            print(f'ID       NAME         QTY      Total')
             print(f'-------------------------------------------------')
             for product in self.all_sales:
                 if(product.id == id):
@@ -35,7 +36,7 @@ class ManageSales(Sales):
 
     def get_all_sales_product(self):
         if(len(self.all_sales)>0):
-            print(f'\nID      NAME        QTY         PRICE')
+            print(f'\nID      NAME        QTY         TOTAL')
             print(f'--------------------------------------------------------')
             for product in self.all_sales:
                 print(f'{product.id}     {product.name}       {product.quantity}         {product.price}')
