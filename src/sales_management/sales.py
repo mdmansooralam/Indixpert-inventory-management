@@ -2,7 +2,7 @@ import json
 import os
 from src.product import Product
 
-SALES_FILE = 'sales.json'
+SALES_FILE = 'src/database/sales.json'
 
 
 class Sales():

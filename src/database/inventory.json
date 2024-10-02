@@ -1,0 +1,38 @@
+[
+    {
+        "name": "LAPTOP",
+        "price": 5000.0,
+        "quantity": 20,
+        "id": "9693"
+    },
+    {
+        "name": "CAMERA",
+        "price": 502.0,
+        "quantity": 25,
+        "id": "2646"
+    },
+    {
+        "name": "WATCH",
+        "price": 6500.0,
+        "quantity": 2500,
+        "id": "883F"
+    },
+    {
+        "name": "MOUSE",
+        "price": 250.0,
+        "quantity": 50,
+        "id": "B771"
+    },
+    {
+        "name": "KEYBOARD",
+        "price": 300.0,
+        "quantity": 50,
+        "id": "614E"
+    },
+    {
+        "name": "CHARGER",
+        "price": 2500.0,
+        "quantity": 25,
+        "id": "00BA"
+    }
+]

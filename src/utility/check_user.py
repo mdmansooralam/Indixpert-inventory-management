@@ -9,6 +9,3 @@ def check_user(username):
     else:
         return False
 
-
-
-print(check_user('rehankhan'))

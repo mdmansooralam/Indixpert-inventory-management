@@ -1,5 +1,6 @@
 from src.inventory_management.inventory_features import InventoryFeatures
 from src.sales_management.sales_features import SalesFeatures
+from src.utility.ask_for_dashboard import ask_for_dashboard
 
 
 def inventory_menu():
@@ -23,32 +24,58 @@ def inventory_menu():
         choice = input('Please Chooose Any Option : ')
         if(choice == '1'):
             inventory.add()
-            continue
+            if(ask_for_dashboard()):
+                continue
+            else:
+                break
         elif(choice == '2'):
             inventory.update()
-            continue
+            if(ask_for_dashboard()):
+                continue
+            else:
+                break
         elif(choice == '3'):
             inventory.delete()
-            continue
+            if(ask_for_dashboard()):
+                continue
+            else:
+                break
         elif(choice == '4'):
             inventory.search()
-            continue
+            if(ask_for_dashboard()):
+                continue
+            else:
+                break
         elif(choice == '5'):
             inventory.display_all_products()
-            continue
+            if(ask_for_dashboard()):
+                continue
+            else:
+                break
         elif(choice == '6'):
             inventory.restock()
-            continue
-
+            if(ask_for_dashboard()):
+                continue
+            else:
+                break
         elif(choice == '7'):
             sale.sale_product()
-            continue
+            if(ask_for_dashboard()):
+                continue
+            else:
+                break
         elif(choice == '8'):
             sale.serach_sales_product()
-            continue
+            if(ask_for_dashboard()):
+                continue
+            else:
+                break
         elif(choice == '9'):
             sale.display_all_sales_product()
-
+            if(ask_for_dashboard()):
+                continue
+            else:
+                break
         elif(choice == '10'):
             break
 

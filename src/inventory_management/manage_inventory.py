@@ -44,32 +44,27 @@ class ManageInventory(Inventory):
             print(f'Product not found ID : {id}')
 
     def search_product(self, *arg):
-
+        print('{:<10}{:<15}{:<10}{:<10}'.format('ID', 'NAME', 'PRICE', 'QUANTITY'))
+        print(f'--------------------------------------------')
+        product_found = False
         for product in self.products:
-            if(not arg):
-                print(f'please enter a valid product id or name')
-                break
-            else:
-                if(product.id == arg[0] or product.name == arg[0]):
-                    print(f'ID    Name         price     Quantity')
-                    print(f'--------------------------------------------')
-                    print(f'{product.id}  {product.name}       {product.price}       {product.quantity}')
-
-                    print(f'\n\n\n')
-                    
-                    break
+                if(product.id == arg[0] or product.name.startswith(arg[0])):
+                    product_found = True
+                    print('{:<10}{:<15}{:<10}{:<10}'.format(product.id,product.name,product.price,product.quantity))
         else:
-            print(f'product not found for given id or name')
-            return {}
+            if(not product_found):
+                print('Product not found')
+            else:
+                print('Finish.....')
 
     def get_all_products(self):
             if(not self.products):
                 print(f'Product record not availabe')
             else:
-                print(f'ID    Name         price     Quantity')
-                print(f'--------------------------------------------')
+                print('{:<10}{:<15}{:<10}{:<10}'.format('ID', 'NAME', 'PRICE', 'QUANTITY'))
+                print('-' * 45)
                 for product in self.products:
-                    print(f'{product.id}  {product.name}       {product.price}       {product.quantity}')
+                    print('{:<10}{:<15}{:<10}{:<10}'.format(product.id,product.name,product.price,product.quantity))
 
     def add_stock(self, id, quantity):
         for product in self.products:
@@ -80,4 +75,3 @@ class ManageInventory(Inventory):
                 break
         else:
             print(f'Product not found for ID: {id}')
-

@@ -3,7 +3,7 @@ import json
 import os
 from src.product import Product
 
-INVENTORY_FILE = 'inventory.json'
+INVENTORY_FILE = 'src/database/inventory.json'
 
 class Inventory:
     def __init__(self):
