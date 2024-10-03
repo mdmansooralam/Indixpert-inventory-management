@@ -1,6 +1,7 @@
 from src.sales_management.sales_features import SalesFeatures
 from src.inventory_management.inventory_features import InventoryFeatures
 from src.utility.ask_for_dashboard import ask_for_dashboard
+from src.user_management.delete_user import delete
 
 
 
@@ -80,7 +81,7 @@ def admin_dashboard():
             else:
                 break
         elif(choice == '10'):
-            print('\nthis feature will come soon...')
+            delete()
             if(ask_for_dashboard()):
                 continue
             else:

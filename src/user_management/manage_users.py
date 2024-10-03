@@ -33,16 +33,3 @@ class ManageUser(User):
                     break
         else:
             print('username not found')
-
-    def delete_user(self, username):
-        userstate = UserState().get_state()
-        if(userstate.role == 'ADMIN'):
-            for user in self.users:
-                if(user.role == 'ADMIN'):
-                    print('\nAdmin account cannot not be delete')
-                elif(user.username == username):
-                    self.users.remove(user)
-                    print(user.username + ' removed successful')
-                    self.save_users()
-        elif(userstate.role == 'USER'):
-            print('\nYou are not authorized for this operation')

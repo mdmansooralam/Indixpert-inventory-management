@@ -47,14 +47,3 @@ class UserFeatures(ManageUser):
         except Exception as error:
             print(error)
 
-    def delete(self):
-        try: 
-            username = username_validate(input('Enter username : '))
-            if(not username):
-                raise Exception('please enter a valid username')
-            if(not check_user(username)):
-                raise Exception('username not found')
-            self.delete_user(username)
-        
-        except Exception as error:
-            print(error)
