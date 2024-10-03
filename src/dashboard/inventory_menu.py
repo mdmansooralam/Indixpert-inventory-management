@@ -7,7 +7,7 @@ def inventory_menu():
     inventory = InventoryFeatures()
     sale = SalesFeatures()
     while True:
-        print(f'\n\n***********************Inventory Management System*********************')
+        print(f'\n***********************Inventory Management System*********************')
         print(f'-----------------------------------------------------------------------')
         print(f'1 ADD PRODUCT')
         print(f'2 UPDATE PRODUCT')
@@ -78,6 +78,7 @@ def inventory_menu():
                 break
         elif(choice == '10'):
             break
+            
 
         else:
             print("Please choose a valid option")

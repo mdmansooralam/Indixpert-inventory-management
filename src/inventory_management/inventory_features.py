@@ -2,6 +2,7 @@ from src.utility.validation import *
 from src.utility.check_product import product_available_in_inventory
 from src.inventory_management.manage_inventory import ManageInventory
 
+
 class InventoryFeatures(ManageInventory):
     
     def add(self):

@@ -51,4 +51,8 @@ def username_validate(username):
     else:
         return False
 
-
+def role_validate(role):
+    if(role.upper() == 'USER' or role.upper() == 'ADMIN'):
+        return role.upper()
+    else:
+        return False

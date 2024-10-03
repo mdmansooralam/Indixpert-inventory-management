@@ -1,8 +1,9 @@
 [
     {
-        "id": "ac7992ff-4",
+        "id": "a978e2e4-b",
         "name": "MD MANSOOR ALAM",
         "username": "mansoor",
-        "password": "Mansoor@123"
+        "password": "Mansoor@123",
+        "role": "USER"
     }
 ]

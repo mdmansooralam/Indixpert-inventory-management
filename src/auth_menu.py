@@ -16,7 +16,6 @@ def authentication_menu():
         choice = input('Please Chooose Any Option : ')
         if(choice == '1'):
             auth.login()
-            continue
         elif(choice == '2'):
             auth.signup()
         elif(choice == '3'):

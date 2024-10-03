@@ -17,11 +17,15 @@ class UserFeatures(ManageUser):
             if(not name):
                 raise Exception('please enter a valid name')
             
+            role = role_validate(input('please enter role : '))
+            if(not role):
+                raise Exception('please choose a valid role and shuld be USER or ADMIN')
+            
             password = password_validate(input(f'Hint : MinLength - 7 and should have lowercase uppercase symbol digit\nEnter Password : '))
             if(not password):
                 raise Exception('please enter a valid password')
             
-            self.user_signup(name, username, password)
+            self.user_signup(name, username, password, role)
         
         except Exception as error:
             print(error)
@@ -40,5 +44,17 @@ class UserFeatures(ManageUser):
             
             self.login_user(username, password)
 
+        except Exception as error:
+            print(error)
+
+    def delete(self):
+        try: 
+            username = username_validate(input('Enter username : '))
+            if(not username):
+                raise Exception('please enter a valid username')
+            if(not check_user(username)):
+                raise Exception('username not found')
+            self.delete_user(username)
+        
         except Exception as error:
             print(error)
