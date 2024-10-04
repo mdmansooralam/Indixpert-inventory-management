@@ -7,21 +7,18 @@ class ManageInventory(Inventory):
 
     def add_product(self, name, qty, price):
             is_product_exist = False
-            try: #suggestion by nisha
-                for product in self.products:
-                    if(product.name == name):
-                        is_product_exist = True
-                        print(f'product name is already exist')
-                        break
-                if(not is_product_exist):
-                    id = str(uuid.uuid4())[:4].upper()
-                    username = UserState().get_state().username
-                    new_product = Product(name, qty, price, id, username)
-                    self.products.append(new_product)
-                    self.save_inventory()   
-                    print(f"\nItem '{name}' ID : {new_product.id} added successfully!\n")
-            except TypeError: #suggetion by nisha
-                print(f'invalid input please retry')
+            for product in self.products:
+                if(product.name == name):
+                    is_product_exist = True
+                    print(f'product name is already exist')
+                    break
+            if(not is_product_exist):
+                id = str(uuid.uuid4())[:4].upper()
+                username = UserState().get_state().username
+                new_product = Product(name, qty, price, id, username)
+                self.products.append(new_product)
+                self.save_inventory()   
+                print(f"\nItem '{name}' ID : {new_product.id} added successfully!\n")
 
     def update_product(self, id, name, quantity, price):
         user = UserState().get_state()

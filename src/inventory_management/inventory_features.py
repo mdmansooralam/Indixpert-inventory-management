@@ -1,6 +1,7 @@
 from src.utility.validation import *
 from src.utility.check_product import product_available_in_inventory
 from src.inventory_management.manage_inventory import ManageInventory
+from src.log_exception import log_exception
 
 
 class InventoryFeatures(ManageInventory):
@@ -22,6 +23,7 @@ class InventoryFeatures(ManageInventory):
             self.add_product(name, quantity, price)
 
         except Exception as error:
+            log_exception(error)
             print(error)
 
     def update(self):
@@ -48,6 +50,7 @@ class InventoryFeatures(ManageInventory):
             self.update_product(id, name, quantity, price)
 
         except Exception as error:
+            log_exception(error)
             print(error)
 
     def delete(self):
@@ -58,6 +61,7 @@ class InventoryFeatures(ManageInventory):
             
             self.delete_product(id)
         except Exception as error:
+            log_exception(error)
             print(error)
     
     def restock(self):

@@ -20,6 +20,10 @@ class Sales():
             
     def save_sales(self):
         """Save Sales Record to json file"""
-        with open(SALES_FILE, 'w') as file:
-            sales_record = [sales.__dict__ for sales in self.all_sales]
-            json.dump(sales_record, file, indent=4)
+        try:
+            with open(SALES_FILE, 'w') as file:
+                sales_record = [sales.__dict__ for sales in self.all_sales]
+                json.dump(sales_record, file, indent=4)
+
+        except Exception as error:
+            print('database connection error')

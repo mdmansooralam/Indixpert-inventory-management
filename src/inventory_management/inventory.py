@@ -19,6 +19,9 @@ class Inventory:
             return []
 
     def save_inventory(self):
-        with open(INVENTORY_FILE, 'w') as file:
-            inventory_products = [product.__dict__ for product in self.products]
-            json.dump(inventory_products, file, indent=4)
+        try:
+            with open(INVENTORY_FILE, 'w') as file:
+                inventory_products = [product.__dict__ for product in self.products]
+                json.dump(inventory_products, file, indent=4)
+        except Exception as eror:
+            print('database connection error')

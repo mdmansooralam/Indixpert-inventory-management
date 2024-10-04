@@ -1,20 +1,6 @@
 [
     {
-        "id": "2d2e9ee9-2",
-        "name": "KAILASH",
-        "username": "kailash",
-        "password": "Kailash@123",
-        "role": "ADMIN"
-    },
-    {
-        "id": "54bb106e-7",
-        "name": "NISHA MODI",
-        "username": "nisha",
-        "password": "Nisha@123",
-        "role": "USER"
-    },
-    {
-        "id": "7a373ad5-a",
+        "id": "69ec08a6-7",
         "name": "MD MANSOOR ALAM",
         "username": "mansoor",
         "password": "Mansoor@123",

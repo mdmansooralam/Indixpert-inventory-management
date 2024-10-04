@@ -16,9 +16,14 @@ class User:
             return []
         
     def save_users(self):
-        with open(USERS_FILE, 'w') as file:
-            all_users = [user.__dict__ for user in self.users]
-            json.dump(all_users, file, indent=4)
+        try:
+            with open(USERS_FILE, 'w') as file:
+                all_users = [user.__dict__ for user in self.users]
+                json.dump(all_users, file, indent=4)
+
+        except Exception as error:
+            print('database connection error')
+
 
 
 
