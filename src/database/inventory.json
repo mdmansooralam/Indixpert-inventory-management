@@ -33,5 +33,12 @@
         "quantity": 20,
         "id": "C2EB",
         "added_by": "kailash"
+    },
+    {
+        "name": "MOUSE",
+        "price": 500.0,
+        "quantity": 30,
+        "id": "11F2",
+        "added_by": "nisha"
     }
 ]

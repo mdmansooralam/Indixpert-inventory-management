@@ -90,9 +90,10 @@ class ManageInventory(Inventory):
             print('-'*45)
             product_found = False
             for product in self.products:
-                if(product.id == arg[0] or product.name.startswith(arg[0]) and product.added_by == user.username):
-                    product_found = True
-                    print('{:<10}{:<15}{:<10}{:<10}'.format(product.id,product.name,product.price,product.quantity))
+                if(product.id == arg[0] or product.name.startswith(arg[0])):
+                    if(product.added_by == user.username):
+                        product_found = True
+                        print('{:<10}{:<15}{:<10}{:<10}'.format(product.id,product.name,product.price,product.quantity))
             else:
                 if(not product_found):
                     print('\nproduct not found')
