@@ -2,6 +2,7 @@
 from src.user_management.manage_users import ManageUser
 from src.utility.validation import *
 from src.utility.check_user import check_user
+from src.log_exception import log_exception
 
 class UserFeatures(ManageUser):
 
@@ -28,6 +29,7 @@ class UserFeatures(ManageUser):
             self.user_signup(name, username, password, role)
         
         except Exception as error:
+            log_exception(error)
             print(error)
 
     def login(self):
@@ -45,5 +47,6 @@ class UserFeatures(ManageUser):
             self.login_user(username, password)
 
         except Exception as error:
+            log_exception(error)
             print(error)
 

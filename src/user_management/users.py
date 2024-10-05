@@ -1,6 +1,7 @@
 import os
 import json
 from src.user_management.user_model import UserModel
+from src.log_exception import log_exception
 USERS_FILE = 'src/database/users.json'
 
 class User:
@@ -22,6 +23,7 @@ class User:
                 json.dump(all_users, file, indent=4)
 
         except Exception as error:
+            log_exception(error)
             print('database connection error')
 
 

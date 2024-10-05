@@ -1,6 +1,7 @@
 from src.sales_management.manage_sales import ManageSales
 from src.utility.validation import *
 from src.utility.check_product import product_available_in_inventory
+from src.log_exception import log_exception
 
 class SalesFeatures(ManageSales):
 
@@ -20,6 +21,7 @@ class SalesFeatures(ManageSales):
             self.add_sale(id, quantity) 
 
         except Exception as error:
+            log_exception(error)
             print(error)
 
     def serach_sales_product(self):
@@ -31,10 +33,12 @@ class SalesFeatures(ManageSales):
             self.get_sale_product(id)
 
         except Exception as error:
+            log_exception(error)
             print(error)
 
     def display_all_sales_product(self):
         try:
             self.get_all_sales_product()
         except Exception as error:
+            log_exception(error)
             print(error)

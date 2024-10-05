@@ -2,6 +2,7 @@ from src.user_management.users import User
 from src.user_management.user_state import UserState
 from src.utility.validation import *
 from src.utility.check_user import check_user
+from src.log_exception import log_exception
 
 def delete():
      delete_feature()
@@ -19,6 +20,7 @@ def delete_feature():
             delete_user(username)
         
         except Exception as error:
+            log_exception(error)
             print(error)
 
 def delete_user(username):

@@ -1,7 +1,7 @@
 import json
 import os
 from src.product import Product
-
+from src.log_exception import log_exception
 SALES_FILE = 'src/database/sales.json'
 
 
@@ -26,4 +26,5 @@ class Sales():
                 json.dump(sales_record, file, indent=4)
 
         except Exception as error:
+            log_exception(error)
             print('database connection error')

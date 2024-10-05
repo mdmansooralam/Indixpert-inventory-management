@@ -80,6 +80,7 @@ class InventoryFeatures(ManageInventory):
             
             self.add_stock(id, quantity)
         except Exception as error:
+            log_exception(error)
             print(error)
 
     def search(self):
@@ -91,6 +92,7 @@ class InventoryFeatures(ManageInventory):
             
             self.search_product(id)
         except Exception as error:
+            log_exception(error)
             print(error)
 
     def display_all_products(self):
@@ -98,6 +100,7 @@ class InventoryFeatures(ManageInventory):
             self.get_all_products()
         except Exception as error:
             print(error)
+            log_exception(error)
         
 
         
